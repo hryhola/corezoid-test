@@ -1,0 +1,16 @@
+{
+  "name": "corezoid-test",
+  "version": "1.0.0",
+  "description": "Corezoid test task",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/tasks/demonstration.ts",
+    "test": "ts-node src/tasks/run-tests.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}

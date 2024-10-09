@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+        "esModuleInterop": true,
+        "moduleResolution": "NodeNext",
+        "resolveJsonModule": true, // for JSON files
+        "lib": ["es2017", "es6"]
+    }
+}
