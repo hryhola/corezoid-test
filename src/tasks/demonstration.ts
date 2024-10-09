@@ -18,21 +18,21 @@ import { ObjectSchema } from '../types'
 
 // Рішення потрібно скинути в комменти.
 
-const nonRequiredFieldsChangeParamIndex = process.argv.indexOf('--nonRequiredFieldsChange')
+const nonRequiredFieldsChanceParamIndex = process.argv.indexOf('--nonRequiredFieldsChance')
 
-let nonRequiredFieldsChange = 0.5
+let nonRequiredFieldsChance = 0.5
 
-if (nonRequiredFieldsChangeParamIndex !== -1 && typeof process.argv[nonRequiredFieldsChangeParamIndex + 1]) {
-    nonRequiredFieldsChange = Number(process.argv[nonRequiredFieldsChangeParamIndex + 1])
+if (nonRequiredFieldsChanceParamIndex !== -1 && typeof process.argv[nonRequiredFieldsChanceParamIndex + 1]) {
+    nonRequiredFieldsChance = Number(process.argv[nonRequiredFieldsChanceParamIndex + 1])
 
-    if (Number.isNaN(nonRequiredFieldsChange) || nonRequiredFieldsChange > 1 || nonRequiredFieldsChange < 0) {
-        console.error('Invalid --nonRequiredFieldsChange parameter')
+    if (Number.isNaN(nonRequiredFieldsChance) || nonRequiredFieldsChance > 1 || nonRequiredFieldsChance < 0) {
+        console.error('Invalid --nonRequiredFieldsChance parameter')
         process.exit(0)
     }
 }
 
-const randomObject = generateRandomObject(schema as ObjectSchema, nonRequiredFieldsChange)
+const randomObject = generateRandomObject(schema as ObjectSchema, nonRequiredFieldsChance)
 
-console.log('Change of spawning non-required field: ' + (nonRequiredFieldsChange * 100).toFixed() + '%')
+console.log('Chance of spawning non-required field: ' + (nonRequiredFieldsChance * 100).toFixed() + '%')
 console.log('Randomly generated object according to the schema:')
 console.log(randomObject)
